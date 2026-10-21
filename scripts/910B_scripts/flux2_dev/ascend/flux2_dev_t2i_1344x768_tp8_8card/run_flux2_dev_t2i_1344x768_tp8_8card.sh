@@ -7,9 +7,6 @@ platform_run_path=/data/Lightx2v-platform-run
 
 export PLATFORM=ascend_npu
 export ASCEND_RT_VISIBLE_DEVICES="${ASCEND_RT_VISIBLE_DEVICES:-0,1,2,3,4,5,6,7}"
-export MASTER_ADDR=127.0.0.1
-export MASTER_PORT="${MASTER_PORT:-29500}"
-export HCCL_CONNECT_TIMEOUT=600
 export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
 export ASCEND_HOME_PATH="${CANN_HOME:-/usr/local/Ascend/ascend-toolkit/latest}"
 export ASCEND_OPP_PATH="${ASCEND_HOME_PATH}/opp"
@@ -24,7 +21,7 @@ and a shallow depth of field, with blurred ocean waves in the background. The ca
 'BFL Diffusers' on it and it has a color gradient that start with #FF5733 at the top and \
 transitions to #33FF57 at the bottom."
 
-torchrun --nnodes=1 --nproc_per_node=8 --master_addr="${MASTER_ADDR}" --master_port="${MASTER_PORT}" -m lightx2v.infer \
+torchrun --standalone --nnodes=1 --nproc_per_node=8 -m lightx2v.infer \
     --model_cls flux2 \
     --task t2i \
     --model_path "${model_path}" \

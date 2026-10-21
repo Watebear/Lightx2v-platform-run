@@ -7,9 +7,6 @@ platform_run_path=/data/Lightx2v-platform-run
 
 export PLATFORM=ascend_npu
 export ASCEND_RT_VISIBLE_DEVICES="${ASCEND_RT_VISIBLE_DEVICES:-0,1,2,3,4,5,6,7}"
-export MASTER_ADDR=127.0.0.1
-export MASTER_PORT="${MASTER_PORT:-29500}"
-export HCCL_CONNECT_TIMEOUT=600
 export PYTORCH_NPU_ALLOC_CONF=expandable_segments:True
 export ASCEND_HOME_PATH="${CANN_HOME:-/usr/local/Ascend/ascend-toolkit/latest}"
 export ASCEND_OPP_PATH="${ASCEND_HOME_PATH}/opp"
@@ -28,7 +25,7 @@ upon it. A shallow depth of field keeps the focus sharply on the fruit and glass
 kitchen backsplash in the background remains softly blurred. The scene is in a realistic style."
 negative_prompt=""
 
-torchrun --nnodes=1 --nproc_per_node=8 --master_addr="${MASTER_ADDR}" --master_port="${MASTER_PORT}" -m lightx2v.infer \
+torchrun --standalone --nnodes=1 --nproc_per_node=8 -m lightx2v.infer \
     --model_cls hunyuan_video_1.5 \
     --task t2v \
     --model_path "${model_path}" \
