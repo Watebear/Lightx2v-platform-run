@@ -1,0 +1,77 @@
+{
+  "infer_steps": 30,
+  "target_video_length": 81,
+  "target_height": 512,
+  "target_width": 768,
+  "attn_type": "flash_attn2",
+  "sample_guide_scale": 3.0,
+  "sample_shift": [
+    2.05,
+    0.95
+  ],
+  "enable_cfg": true,
+  "cpu_offload": true,
+  "offload_granularity": "block",
+  "gemma_cpu_offload": true,
+  "vae_cpu_offload": true,
+  "use_real_mel_spectrogram": true,
+  "norm_modulate_backend": "torch",
+  "modulate_type": "torch",
+  "rope_type": "torch_real_rope",
+  "layer_norm_type": "torch",
+  "rms_norm_type": "torch",
+  "num_channels_latents": 128,
+  "num_layers": 48,
+  "num_attention_heads": 32,
+  "attention_head_dim": 128,
+  "audio_num_attention_heads": 32,
+  "audio_attention_head_dim": 64,
+  "audio_cross_attention_dim": 2048,
+  "audio_pos_embed_max_pos": 20,
+  "timestep_scale_multiplier": 1000,
+  "cross_attn_timestep_scale_multiplier": 1000.0,
+  "vae_scale_factors": [
+    8,
+    32,
+    32
+  ],
+  "audio_sampling_rate": 16000,
+  "audio_hop_length": 160,
+  "audio_scale_factor": 4,
+  "fps": 24,
+  "audio_fps": 24000,
+  "audio_mel_bins": 16,
+  "double_precision_rope": false,
+  "use_tiling_vae": false,
+  "dit_original_ckpt": "/data/models/LTX-2.3/ltx-2.3-22b-dev.safetensors",
+  "caption_proj_before_connector": true,
+  "cross_attention_adaln": true,
+  "apply_gated_attention": true,
+  "mm_guider": {
+    "enabled": true,
+    "video": {
+      "cfg_scale": 3.0,
+      "stg_scale": 1.0,
+      "stg_blocks": [
+        28
+      ],
+      "modality_scale": 3.0,
+      "rescale_scale": 0.7,
+      "skip_step": 0
+    },
+    "audio": {
+      "cfg_scale": 7.0,
+      "stg_scale": 1.0,
+      "stg_blocks": [
+        28
+      ],
+      "modality_scale": 3.0,
+      "rescale_scale": 0.7,
+      "skip_step": 0
+    }
+  },
+  "use_compile": true,
+  "warmup": true,
+  "use_bfloat16": true,
+  "feature_caching": "NoCaching"
+}

@@ -1,0 +1,33 @@
+{
+  "infer_steps": 15,
+  "guidance_scale": 5.0,
+  "enable_rembg": false,
+  "enable_pbar": true,
+  "box_v": 1.01,
+  "mc_level": 0.0,
+  "num_chunks": 8000,
+  "octree_resolution": 384,
+  "attn_type": "npu_flash_attn",
+  "rms_norm_type": "npu_rms_norm",
+  "moe_backend": "npu_grouped_mm",
+  "warmup": true,
+  "use_compile": true,
+  "compile_backend": "mindie",
+  "size": [
+    384,
+    384
+  ],
+  "benchmark_reference_note": "Personal benchmark adapter compiles the multiview UNet and super-resolution module with MindIE and runs a same-input no-save warmup before the two formal requests. Native remesh/render/bake/inpaint path remains intact. The selected input mesh path and SHA256 are logged.",
+  "mesh_input": "/data/inputs/meshes/hunyuan3d_shape_input.glb",
+  "render_size": 2048,
+  "texture_size": 4096,
+  "max_num_view": 6,
+  "resolution": 512,
+  "model_cls": "hunyuan3d_paint",
+  "task": "paint",
+  "seed": 0,
+  "mesh_input_fallback": "/data/inputs/meshes/hunyuan3d/shape.glb",
+  "warmup_prompt": "Image-conditioned Hunyuan3D paint benchmark",
+  "warmup_negative_prompt": "",
+  "warmup_seed": 0
+}

@@ -1,0 +1,40 @@
+{
+  "infer_steps": 50,
+  "transformer_model_name": "480p_t2v",
+  "fps": 24,
+  "vae_stride": [
+    4,
+    16,
+    16
+  ],
+  "sample_shift": 5,
+  "sample_guide_scale": 6,
+  "aspect_ratio": "16:9",
+  "enable_cfg": true,
+  "attn_type": "npu_flash_attn",
+  "cpu_offload": false,
+  "qwen25vl_cpu_offload": true,
+  "byt5_cpu_offload": false,
+  "vae_cpu_offload": false,
+  "align_single_card_shape": true,
+  "modulate_type": "torch",
+  "rope_type": "npu_rope",
+  "layer_norm_type": "npu_layer_norm",
+  "rms_norm_type": "npu_rms_norm",
+  "parallel": {
+    "cfg_p_size": 2,
+    "seq_p_size": 4,
+    "seq_p_attn_type": "ulysses"
+  },
+  "num_frames": 121,
+  "size": [
+    480,
+    848
+  ],
+  "warmup": true,
+  "use_compile": true,
+  "compile_backend": "mindie",
+  "warmup_prompt": "A close-up shot captures a scene on a polished, light-colored granite kitchen counter, illuminated by soft natural light from an unseen window. Initially, the frame focuses on a tall, clear glass filled with golden, translucent apple juice standing next to a single, shiny red apple with a green leaf still attached to its stem. The camera moves horizontally to the right. As the shot progresses, a white ceramic plate smoothly enters the frame, revealing a fresh arrangement of about seven or eight more apples, a mix of vibrant reds and greens, piled neatly upon it. A shallow depth of field keeps the focus sharply on the fruit and glass, while the kitchen backsplash in the background remains softly blurred. The scene is in a realistic style.",
+  "warmup_negative_prompt": "",
+  "warmup_seed": 123
+}

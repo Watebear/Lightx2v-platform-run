@@ -1,0 +1,16 @@
+{
+  "model_path": "/data/models/Hunyuan3D-2.1",
+  "hy_repo": "/data/Hunyuan3D-2.1",
+  "mesh_path": "/data/LightX2V/save_results/hunyuan3d/demo.glb",
+  "image_path": "/data/Hunyuan3D-2.1/assets/demo.png",
+  "dino_ckpt_path": "/data/models/dinov2-giant",
+  "realesrgan_ckpt_path": "/data/Hunyuan3D-2.1/hy3dpaint/ckpt/RealESRGAN_x4plus.pth",
+  "render_size": 2048,
+  "texture_size": 4096,
+  "max_num_view": 6,
+  "resolution": 512,
+  "seed": 42,
+  "use_remesh": true,
+  "use_compile": true,
+  "warmup": true
+}

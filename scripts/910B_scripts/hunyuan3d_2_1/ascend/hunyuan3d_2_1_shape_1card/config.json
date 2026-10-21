@@ -1,0 +1,25 @@
+{
+  "infer_steps": 50,
+  "guidance_scale": 5.0,
+  "enable_rembg": false,
+  "enable_pbar": true,
+  "box_v": 1.01,
+  "mc_level": 0.0,
+  "num_chunks": 8000,
+  "octree_resolution": 384,
+  "attn_type": "npu_flash_attn",
+  "rms_norm_type": "npu_rms_norm",
+  "moe_backend": "npu_grouped_mm",
+  "warmup": true,
+  "use_compile": true,
+  "compile_backend": "mindie",
+  "size": [
+    384,
+    384
+  ],
+  "benchmark_reference_note": "3D mesh output; size 384 denotes octree resolution rather than image/video dimensions. Native shape requires a save path; personal adapter retains diffusion and mesh decode and skips final serialization when no-save.",
+  "warmup_prompt": "Image-conditioned Hunyuan3D shape benchmark",
+  "warmup_negative_prompt": "",
+  "warmup_seed": 42,
+  "warmup_image_path": "/data/inputs/hunyuan3d/demo.png"
+}

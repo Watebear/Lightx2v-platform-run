@@ -1,0 +1,66 @@
+{
+  "infer_steps": 30,
+  "attn_type": "npu_flash_attn",
+  "sample_guide_scale": 3.0,
+  "sample_shift": [
+    2.05,
+    0.95
+  ],
+  "enable_cfg": true,
+  "cpu_offload": true,
+  "offload_granularity": "model",
+  "gemma_cpu_offload": true,
+  "vae_cpu_offload": false,
+  "use_real_mel_spectrogram": true,
+  "norm_modulate_backend": "torch",
+  "modulate_type": "torch",
+  "rope_type": "torch_real_rope",
+  "layer_norm_type": "npu_layer_norm",
+  "rms_norm_type": "ltx2_npu_compatible",
+  "num_channels_latents": 128,
+  "fps": 24,
+  "audio_fps": 24000,
+  "audio_mel_bins": 16,
+  "double_precision_rope": false,
+  "use_tiling_vae": false,
+  "dit_original_ckpt": "/data/models/LTX-2.3/ltx-2.3-22b-dev.safetensors",
+  "caption_proj_before_connector": true,
+  "cross_attention_adaln": true,
+  "apply_gated_attention": true,
+  "mm_guider": {
+    "enabled": true,
+    "video": {
+      "cfg_scale": 3.0,
+      "stg_scale": 1.0,
+      "stg_blocks": [
+        28
+      ],
+      "modality_scale": 3.0,
+      "rescale_scale": 0.7,
+      "skip_step": 0
+    },
+    "audio": {
+      "cfg_scale": 7.0,
+      "stg_scale": 1.0,
+      "stg_blocks": [
+        28
+      ],
+      "modality_scale": 3.0,
+      "rescale_scale": 0.7,
+      "skip_step": 0
+    }
+  },
+  "num_frames": 81,
+  "size": [
+    512,
+    768
+  ],
+  "warmup": true,
+  "use_compile": true,
+  "compile_backend": "mindie",
+  "benchmark_norm_fix": "LTX2 affine-free block norm uses torch_native; weighted norms remain npu_rms_norm. The native npu_rms_norm loader raises KeyError: None for unweighted norms.",
+  "warmup_prompt": "A person speaks clearly in a quiet room, natural lighting, cinematic medium shot.",
+  "warmup_negative_prompt": "blurry, out of focus, overexposed, underexposed, low contrast, excessive noise, poor lighting, flickering, motion blur, distorted proportions, unnatural skin tones, deformed facial features, disfigured hands, artifacts, inconsistent perspective, mismatched lip sync, silent or muted audio, distorted voice, robotic voice, echo, off-sync audio, AI artifacts.",
+  "warmup_seed": 42,
+  "warmup_audio_path": "/data/inputs/audio/seko_input.mp3"
+}

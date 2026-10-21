@@ -1,0 +1,19 @@
+{
+  "use_compile": true,
+  "feature_caching": "NoCaching",
+  "max_num_view": 6,
+  "resolution": 512,
+  "render_size": 2048,
+  "texture_size": 4096,
+  "use_remesh": true,
+  "dino_ckpt_path": "/data/models/dinov2-giant",
+  "realesrgan_ckpt_path": "/data/models/Hunyuan3D-2.1/RealESRGAN_x4plus.pth",
+  "timing_metric": "sum of synchronous multiview_model and super_model calls",
+  "paint_multiview_seed": 0,
+  "stage": "paint",
+  "model_path": "/data/models/Hunyuan3D-2.1",
+  "image_path": "/data/inputs/hunyuan3d/demo.png",
+  "hy_repo": "/data/Hunyuan3D-2.1",
+  "shape_case_id": "hunyuan3d-2.1-shape",
+  "warmup": true
+}

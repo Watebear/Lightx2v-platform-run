@@ -1,0 +1,28 @@
+{
+  "model_cls": "flux2",
+  "model_variant": "dev",
+  "task": "t2i",
+  "infer_steps": 50,
+  "aspect_ratio": "16:9",
+  "sample_guide_scale": 4.0,
+  "vae_scale_factor": 16,
+  "feature_caching": "None",
+  "enable_cfg": false,
+  "tokenizer_max_length": 512,
+  "text_encoder_out_layers": [
+    10,
+    20,
+    30
+  ],
+  "attn_type": "metax_sage_attn2",
+  "cpu_offload": true,
+  "offload_granularity": "block",
+  "modulate_type": "torch",
+  "rope_type": "torch_complex_rope",
+  "layer_norm_type": "torch",
+  "rms_norm_type": "torch",
+  "warmup": false,
+  "use_compile": true,
+  "use_magi_compile": false,
+  "size": [768, 1344]
+}

@@ -1,0 +1,207 @@
+{
+  "platform": "mlu590",
+  "case_count": 20,
+  "order": "cases[].order",
+  "cases": [
+    {
+      "order": 1,
+      "case_id": "qwen_image_2512_t2i_1664x928",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "qwen_image/mlu590/qwen_image_2512_t2i_1664x928_1card/config.json",
+      "script": "qwen_image/mlu590/qwen_image_2512_t2i_1664x928_1card/run_qwen_image_2512_t2i_1664x928_1card.sh",
+      "config_sha256": "f5c8c2508223865000494bca19711e7e3c30d8a2c7e6a00dd7f3a0371dc06e53",
+      "script_sha256": "d906f163dfef11a05b6345d4ff6bedce310f2e839145887ccec7584bccd4dabf"
+    },
+    {
+      "order": 2,
+      "case_id": "qwen_image_2512_t2i_1664x928_cfg2_sp4",
+      "cards": 8,
+      "parallel_strategy": "cfg2_sp4",
+      "config": "qwen_image/mlu590/qwen_image_2512_t2i_1664x928_cfg2_sp4_8card/config.json",
+      "script": "qwen_image/mlu590/qwen_image_2512_t2i_1664x928_cfg2_sp4_8card/run_qwen_image_2512_t2i_1664x928_cfg2_sp4_8card.sh",
+      "config_sha256": "89fb227599c17d9388ea7129d351da10f4eb28455a6fd3e9254c6239bc37f938",
+      "script_sha256": "cdeff1719d60555018ad2888029312ffc35bca94c6b230815bb87d201dcf8bf7"
+    },
+    {
+      "order": 3,
+      "case_id": "longcat_image_t2i_1344x768",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "longcat_image/mlu590/longcat_image_t2i_1344x768_1card/config.json",
+      "script": "longcat_image/mlu590/longcat_image_t2i_1344x768_1card/run_longcat_image_t2i_1344x768_1card.sh",
+      "config_sha256": "2d3075c5a6e1fe41e924db233be3b016c567db3e9bb19b6281c01375b9a2f198",
+      "script_sha256": "3923ed969e27804f6aafbb25cf26ad1afced8ec51bcf298aa8e494402d0047db"
+    },
+    {
+      "order": 4,
+      "case_id": "longcat_image_t2i_1344x768_cfg2_sp4",
+      "cards": 8,
+      "parallel_strategy": "cfg2_sp4",
+      "config": "longcat_image/mlu590/longcat_image_t2i_1344x768_cfg2_sp4_8card/config.json",
+      "script": "longcat_image/mlu590/longcat_image_t2i_1344x768_cfg2_sp4_8card/run_longcat_image_t2i_1344x768_cfg2_sp4_8card.sh",
+      "config_sha256": "a0f17684593c3f13019e0dd9fcba76667fc17dcda9b8ab3be5f988bb2fada96b",
+      "script_sha256": "76d9837fd7b5517ce0ac21a47e532886826a9e45d55f758747c49607c231b3ae"
+    },
+    {
+      "order": 5,
+      "case_id": "flux2_dev_t2i_1344x768",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "flux2_dev/mlu590/flux2_dev_t2i_1344x768_1card/config.json",
+      "script": "flux2_dev/mlu590/flux2_dev_t2i_1344x768_1card/run_flux2_dev_t2i_1344x768_1card.sh",
+      "config_sha256": "6d08f99bde07b414c6d2044de8d7ee9acfd1b2e803e2360e6ddb37d44f16cf23",
+      "script_sha256": "b5cf2bf59fb970fcfb061d9ff5b3d3fcfb0a1a84d4a9ed2d14f5827e9826cd9f"
+    },
+    {
+      "order": 6,
+      "case_id": "flux2_dev_t2i_1344x768_tp8",
+      "cards": 8,
+      "parallel_strategy": "tp8",
+      "config": "flux2_dev/mlu590/flux2_dev_t2i_1344x768_tp8_8card/config.json",
+      "script": "flux2_dev/mlu590/flux2_dev_t2i_1344x768_tp8_8card/run_flux2_dev_t2i_1344x768_tp8_8card.sh",
+      "config_sha256": "cf0a3032e5bf6076c1004ccb8ea573eb0a06518acccd9a3722fe1b238efefe26",
+      "script_sha256": "a775946718122d158a95b1513dcc048fc348448173cb47098e4dafbe05f75550"
+    },
+    {
+      "order": 7,
+      "case_id": "z_image_turbo_t2i_1664x928_single",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "z_image_turbo/mlu590/z_image_turbo_t2i_1664x928_1card/config.json",
+      "script": "z_image_turbo/mlu590/z_image_turbo_t2i_1664x928_1card/run_z_image_turbo_t2i_1664x928_1card.sh",
+      "config_sha256": "44fc9ff28d5af331cd0caed389d7a8573b983296a18bcc69f706b6e12240f061",
+      "script_sha256": "22744ef2fc3096f416ddffbdff4cb02a514d7d0a9704046fa39d09ce939c577f"
+    },
+    {
+      "order": 8,
+      "case_id": "z_image_turbo_t2i_1664x928_sp2",
+      "cards": 2,
+      "parallel_strategy": "sp2",
+      "config": "z_image_turbo/mlu590/z_image_turbo_t2i_1664x928_sp2_2card/config.json",
+      "script": "z_image_turbo/mlu590/z_image_turbo_t2i_1664x928_sp2_2card/run_z_image_turbo_t2i_1664x928_sp2_2card.sh",
+      "config_sha256": "c6fdec6f7c036ebc25d0e833daaa15dcc74c2eabc9c765c6c8b1ff2023361fa7",
+      "script_sha256": "5404eaceff0f8633fc14ffba98caf91e63ce0a39f41d6a2c4d37a862238e4dc3"
+    },
+    {
+      "order": 9,
+      "case_id": "wan21_1_3b_t2v_480p_81f",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "wan21/mlu590/wan21_1_3b_t2v_480p_81f_1card/config.json",
+      "script": "wan21/mlu590/wan21_1_3b_t2v_480p_81f_1card/run_wan21_1_3b_t2v_480p_81f_1card.sh",
+      "config_sha256": "9ae99cc84a59800b0ba35c765e2c3b5f4751f5716008cde3695fc14c44defddb",
+      "script_sha256": "91980c1b1946265534d7eb104c06ce818f0a8ae185b55ed6df6c2af59ad90679"
+    },
+    {
+      "order": 10,
+      "case_id": "wan21_1_3b_t2v_480p_81f_cfg2_sp4",
+      "cards": 8,
+      "parallel_strategy": "cfg2_sp4",
+      "config": "wan21/mlu590/wan21_1_3b_t2v_480p_81f_cfg2_sp4_8card/config.json",
+      "script": "wan21/mlu590/wan21_1_3b_t2v_480p_81f_cfg2_sp4_8card/run_wan21_1_3b_t2v_480p_81f_cfg2_sp4_8card.sh",
+      "config_sha256": "a1c54674136cbae5ca0488e016c5724a3dcb2045308b1f6e77852f204c0cf680",
+      "script_sha256": "6df38650b4c79bce458800b5c45861b8650a0bcba1bb6c3c4aff9574e6155aa7"
+    },
+    {
+      "order": 11,
+      "case_id": "wan21_1_3b_self_forcing_t2v_480p_81f",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "wan21_self_forcing/mlu590/wan21_1_3b_self_forcing_t2v_480p_81f_1card/config.json",
+      "script": "wan21_self_forcing/mlu590/wan21_1_3b_self_forcing_t2v_480p_81f_1card/run_wan21_1_3b_self_forcing_t2v_480p_81f_1card.sh",
+      "config_sha256": "3099e9d2c89db0fa4a15c77026dfd7fb5fa63a93e69e830ad0ed18a32ff132bb",
+      "script_sha256": "75261bac654f26357e68710611b223cd452b664ffcb6afc9d38b1dbc7b2ba07a"
+    },
+    {
+      "order": 12,
+      "case_id": "wan22_moe_a14b_t2v_480p_81f",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "wan22_moe/mlu590/wan22_moe_a14b_t2v_480p_81f_1card/config.json",
+      "script": "wan22_moe/mlu590/wan22_moe_a14b_t2v_480p_81f_1card/run_wan22_moe_a14b_t2v_480p_81f_1card.sh",
+      "config_sha256": "acc0ba2b97f081adbe1cc35558adb97e9c9d9de5228a52be8a9df404bc760a31",
+      "script_sha256": "71b28069499980dc66bd8e90d36395722140390a9cb9004575d6954a89b82c28"
+    },
+    {
+      "order": 13,
+      "case_id": "wan22_moe_a14b_t2v_480p_81f_tp8",
+      "cards": 8,
+      "parallel_strategy": "tp8",
+      "config": "wan22_moe/mlu590/wan22_moe_a14b_t2v_480p_81f_tp8_8card/config.json",
+      "script": "wan22_moe/mlu590/wan22_moe_a14b_t2v_480p_81f_tp8_8card/run_wan22_moe_a14b_t2v_480p_81f_tp8_8card.sh",
+      "config_sha256": "b62df9746dff7261241a98e31e1bc18f7b865417a95284c2de9906c31f7e27c9",
+      "script_sha256": "1983c578938f4e5b2241a621f6897745198c05297ce882355c453f4a482124ae"
+    },
+    {
+      "order": 14,
+      "case_id": "wan22_moe_a14b_t2v_480p_81f_cfg2_sp4",
+      "cards": 8,
+      "parallel_strategy": "cfg2_sp4",
+      "config": "wan22_moe/mlu590/wan22_moe_a14b_t2v_480p_81f_cfg2_sp4_8card/config.json",
+      "script": "wan22_moe/mlu590/wan22_moe_a14b_t2v_480p_81f_cfg2_sp4_8card/run_wan22_moe_a14b_t2v_480p_81f_cfg2_sp4_8card.sh",
+      "config_sha256": "279b1b02b604eb9495513e3d698b440d9eaf5c317847b1c3a4f14c023cd94819",
+      "script_sha256": "406108f02e611bfc9baa513cb324251be3438f9a4f14067aa3a74a953f087583"
+    },
+    {
+      "order": 15,
+      "case_id": "hunyuan_video_15_t2v_480p_121f",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "hunyuan_video_15/mlu590/hunyuan_video_15_t2v_480p_121f_1card/config.json",
+      "script": "hunyuan_video_15/mlu590/hunyuan_video_15_t2v_480p_121f_1card/run_hunyuan_video_15_t2v_480p_121f_1card.sh",
+      "config_sha256": "baaf5bc0c74963bb40670d63057f909fcbf6184cba92dff86075ff1fc8f0584c",
+      "script_sha256": "a04312aadc839fa824e68491ecd635f380db468cded7df88437da659bb217bf6"
+    },
+    {
+      "order": 16,
+      "case_id": "hunyuan_video_15_t2v_480p_121f_cfg2_sp4",
+      "cards": 8,
+      "parallel_strategy": "cfg2_sp4",
+      "config": "hunyuan_video_15/mlu590/hunyuan_video_15_t2v_480p_121f_cfg2_sp4_8card/config.json",
+      "script": "hunyuan_video_15/mlu590/hunyuan_video_15_t2v_480p_121f_cfg2_sp4_8card/run_hunyuan_video_15_t2v_480p_121f_cfg2_sp4_8card.sh",
+      "config_sha256": "65dcef6d993c17f382d9d4b89647da5615233247d76ac82d487295bc504a45fb",
+      "script_sha256": "b836162ee58e8649c7e44860ca19480a43ffe2356bf8209dc1f04c7fb3200488"
+    },
+    {
+      "order": 17,
+      "case_id": "ltx2_3_22b_dev_s2v_768x512_81f",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "ltx2_3/mlu590/ltx2_3_22b_dev_s2v_768x512_81f_1card/config.json",
+      "script": "ltx2_3/mlu590/ltx2_3_22b_dev_s2v_768x512_81f_1card/run_ltx2_3_22b_dev_s2v_768x512_81f_1card.sh",
+      "config_sha256": "b267df0bbd3cd3640062870f9ae529c2ba2034d5623a4e1bff3c1b6af5885b7c",
+      "script_sha256": "2267c976cc04a17c531c2292423ac724c7839c202f0123a8cedaeb785a7fba4b"
+    },
+    {
+      "order": 18,
+      "case_id": "ltx2_3_22b_dev_s2v_768x512_81f_sp8",
+      "cards": 8,
+      "parallel_strategy": "sp8",
+      "config": "ltx2_3/mlu590/ltx2_3_22b_dev_s2v_768x512_81f_sp8_8card/config.json",
+      "script": "ltx2_3/mlu590/ltx2_3_22b_dev_s2v_768x512_81f_sp8_8card/run_ltx2_3_22b_dev_s2v_768x512_81f_sp8_8card.sh",
+      "config_sha256": "eeaee35e8395b7fb875c4b7c92c0536161331aa7aebbfe0a3a85551a99354d76",
+      "script_sha256": "789b50f9835c70e6f5fc51c8e1b26cefa5b76e90daa2eb30166bbd380f2a5edc"
+    },
+    {
+      "order": 19,
+      "case_id": "hunyuan3d_2_1_shape",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "hunyuan3d_2_1/mlu590/hunyuan3d_2_1_shape_1card/config.json",
+      "script": "hunyuan3d_2_1/mlu590/hunyuan3d_2_1_shape_1card/run_hunyuan3d_2_1_shape_1card.sh",
+      "config_sha256": "cd4b9a5e5a3fe4950d5933de7ed646789c46217f5db2d14731be7f81435f963b",
+      "script_sha256": "1566b10be30cd4657f5a53382ed092414978c54707049bd7975f3a1606abba2f"
+    },
+    {
+      "order": 20,
+      "case_id": "hunyuan3d_2_1_paint",
+      "cards": 1,
+      "parallel_strategy": "single",
+      "config": "hunyuan3d_2_1/mlu590/hunyuan3d_2_1_paint_1card/config.json",
+      "script": "hunyuan3d_2_1/mlu590/hunyuan3d_2_1_paint_1card/run_hunyuan3d_2_1_paint_1card.sh",
+      "config_sha256": "987284f6aa7f2f20299ba0d71c3732af008c98f0a7aee2c778241fa433539b9e",
+      "script_sha256": "10fcf436e3358bee56a7aae5c03a56141bbc7decab115d1f35c3b85ef8b8c690"
+    }
+  ]
+}

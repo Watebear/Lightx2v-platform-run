@@ -1,0 +1,31 @@
+{
+  "infer_steps": 50,
+  "guidance_scale": 5.0,
+  "enable_rembg": true,
+  "enable_pbar": true,
+  "box_v": 1.01,
+  "mc_level": 0.0,
+  "num_chunks": 8000,
+  "octree_resolution": 384,
+  "attn_type": "torch_sdpa",
+  "use_fused_qk_rms_norm": false,
+  "moe_backend": "pytorch",
+  "moe_flashinfer_setting": {
+    "autotune": false
+  },
+  "rms_norm_type": "torch",
+  "use_compile": true,
+  "warmup": true,
+  "use_fused_qkv_attn": false,
+  "feature_caching": "NoCaching",
+  "dit_quantized": false,
+  "use_bfloat16": false,
+  "cpu_offload": false,
+  "subfolder": "hunyuan3d-dit-v2-1",
+  "variant": "fp16",
+  "parallel": false,
+  "stage": "shape",
+  "model_path": "/data/models/Hunyuan3D-2.1",
+  "image_path": "/data/inputs/hunyuan3d/demo.png",
+  "hy_repo": "/data/Hunyuan3D-2.1"
+}

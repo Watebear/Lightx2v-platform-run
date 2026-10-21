@@ -1,0 +1,31 @@
+{
+  "infer_steps": 50,
+  "aspect_ratio": "16:9",
+  "attn_type": "npu_flash_attn",
+  "enable_cfg": true,
+  "sample_guide_scale": 4.0,
+  "enable_cfg_renorm": true,
+  "cfg_renorm_min": 0.0,
+  "axes_dims_rope": [
+    16,
+    56,
+    56
+  ],
+  "dit_quant_scheme": "Default",
+  "cpu_offload": false,
+  "modulate_type": "torch",
+  "rope_type": "npu_rope",
+  "layer_norm_type": "npu_layer_norm",
+  "rms_norm_type": "npu_rms_norm",
+  "num_frames": 1,
+  "size": [
+    768,
+    1344
+  ],
+  "warmup": true,
+  "use_compile": true,
+  "compile_backend": "mindie",
+  "warmup_prompt": "一只小猫躺在沙发上",
+  "warmup_negative_prompt": "",
+  "warmup_seed": 42
+}

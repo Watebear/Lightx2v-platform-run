@@ -1,0 +1,29 @@
+{
+  "aspect_ratio": "16:9",
+  "num_channels_latents": 16,
+  "infer_steps": 9,
+  "attn_type": "npu_flash_attn",
+  "enable_cfg": false,
+  "sample_guide_scale": 0.0,
+  "patch_size": 2,
+  "cpu_offload": false,
+  "modulate_type": "torch",
+  "rope_type": "npu_rope",
+  "layer_norm_type": "npu_layer_norm",
+  "rms_norm_type": "npu_rms_norm",
+  "parallel": {
+    "seq_p_size": 2,
+    "seq_p_attn_type": "ulysses"
+  },
+  "num_frames": 1,
+  "size": [
+    928,
+    1664
+  ],
+  "warmup": true,
+  "use_compile": true,
+  "compile_backend": "mindie",
+  "warmup_prompt": "Young Chinese woman in red Hanfu, intricate embroidery. Impeccable makeup, red floral forehead pattern. Elaborate high bun, golden phoenix headdress, red flowers, beads. Holds round folding fan with lady, trees, bird. Neon lightning-bolt lamp (⚡️), bright yellow glow, above extended left palm. Soft-lit outdoor night background, silhouetted tiered pagoda (西安大雁塔), blurred colorful distant lights.",
+  "warmup_negative_prompt": " ",
+  "warmup_seed": 42
+}
